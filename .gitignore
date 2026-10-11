@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+.build/
+qa/
+**/Exports/
+dist/
+*.zip
+package.ps1
+docs/DI3-SAMPLE-SEARCH.*
+docs/VALIDATION.md
+docs/FORMAT.md

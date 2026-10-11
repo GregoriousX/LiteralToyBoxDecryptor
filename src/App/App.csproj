@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>LiteralToyBoxDecryptor</AssemblyName>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <RuntimeFrameworkVersion>10.0.12</RuntimeFrameworkVersion>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup><ProjectReference Include="../Core/Core.csproj" /></ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="../../LICENSE" LogicalName="LiteralToyBoxDecryptor.License" />
+    <EmbeddedResource Include="$(NuGetPackageRoot)/microsoft.netcore.app.runtime.win-x64/$(RuntimeFrameworkVersion)/LICENSE.TXT" LogicalName="LiteralToyBoxDecryptor.DotNetLicense" />
+    <EmbeddedResource Include="$(NuGetPackageRoot)/microsoft.netcore.app.runtime.win-x64/$(RuntimeFrameworkVersion)/THIRD-PARTY-NOTICES.TXT" LogicalName="LiteralToyBoxDecryptor.DotNetNotices" />
+    <EmbeddedResource Include="$(NuGetPackageRoot)/microsoft.windowsdesktop.app.runtime.win-x64/$(RuntimeFrameworkVersion)/LICENSE" LogicalName="LiteralToyBoxDecryptor.WindowsDesktopLicense" />
+  </ItemGroup>
+</Project>
